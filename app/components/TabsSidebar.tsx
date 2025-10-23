@@ -11,7 +11,7 @@ interface TabsSidebarProps {
 export default function TabsSidebar({ active, setActive, tabs }: TabsSidebarProps) {
   return (
     <aside className="w-64 min-h-screen border-r p-4 bg-slate-900 text-slate-100">
-      <h3 className="text-xl font-semibold mb-4">LinkedIn AI Toolkit</h3>
+      <h3 className="text-xl hidden md:block font-semibold mb-4">LinkedIn AI Toolkit</h3>
       <ul className="space-y-2">
         {tabs.map((t) => (
           <li key={t}>
