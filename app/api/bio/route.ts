@@ -41,7 +41,7 @@ Requirements:
 example: 
 Next.js & MERN Stack Developer | High-Performance Websites | SEO & AI-Powered Apps | Helping Businesses Scale Online
 
-use the above one as an example and write other bio like that and my checrters length of example is perfect make sure whatever youw rite should be fit here 
+use the above one as an example and write other bio like that and my checrters length of example is perfect make sure whatever youw rite should be fit here but it should not be more then two sentences likle if there arre two skills use & or | and add a catching line only one line is enough seperted by | this 
 
 
 ${input.trim()}
