@@ -39,10 +39,10 @@ Requirements:
 - Write as one continuous narrative without bullet points
 
 example: 
-Next.js & MERN Stack Developer | High-Performance Websites | SEO & AI-Powered Apps | Helping Businesses Scale Online
+Next.js & MERN Stack Developer | Crafting Scalable Web Solutions 
 
 use the above one as an example and write other bio like that and my checrters length of example is perfect make sure whatever youw rite should be fit here but it should not be more then two sentences likle if there arre two skills use & or | and add a catching line only one line is enough seperted by | this 
-this should be enough: Next.js & MERN Stack Developer | Crafting Scalable Web Solutions  ass example stright forward skills specific 
+this should be enough:  ass example stright forward skills specific 
 
 
 ${input.trim()}
