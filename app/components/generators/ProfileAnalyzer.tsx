@@ -37,7 +37,7 @@ export default function ProfileAnalyzer() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-1">🧠 Profile Analyzer</h1>
+      <h1 className="text-2xl font-bold mb-1">Profile Analyzer</h1>
       <p className="text-sm text-slate-500 mb-6">
         Paste your full LinkedIn “About”, headline, or a recent role — get clarity and strength feedback.
       </p>
