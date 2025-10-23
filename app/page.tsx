@@ -18,7 +18,7 @@ export default function HomePage() {
 
   const renderActiveTab = () => {
     switch (active) {
-      case "About / Bio Generator":
+      case "Headline Generator":
         return <HeadlineGenerator />;
       case "Experience Writer":
         return <ExperienceWriter />;
