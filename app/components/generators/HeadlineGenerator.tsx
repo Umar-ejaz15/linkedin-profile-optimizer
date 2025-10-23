@@ -6,7 +6,7 @@ import { Copy, RefreshCw } from "lucide-react";
 const TONES = ["Professional", "Casual", "Confident", "Creative", "Brief"] as const;
 type Tone = typeof TONES[number];
 
-export default function BioGenerator() {
+export default function HeadlineGenerator() {
   const [tone, setTone] = useState<Tone>("Professional");
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
@@ -17,7 +17,7 @@ export default function BioGenerator() {
     const trimmedInput = input.trim();
     
     if (!trimmedInput) {
-      setError("Please enter something to generate a bio.");
+      setError("Please enter something to generate a Headline.");
       return;
     }
 
@@ -35,7 +35,7 @@ export default function BioGenerator() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || "Failed to generate bio");
+        throw new Error(data.error || "Failed to generate Headline");
       }
 
       setOutput(data.result || "No output generated.");
@@ -60,7 +60,7 @@ export default function BioGenerator() {
 
   return (
     <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-2 text-gray-900">About / Bio Generator</h1>
+      <h1 className="text-3xl font-bold mb-2 text-gray-900">Headline Generator</h1>
       <p className="text-base text-gray-700 mb-6">
         Generate your LinkedIn About section with a tone of your choice.
       </p>
@@ -121,12 +121,12 @@ export default function BioGenerator() {
           <label className="block text-sm font-semibold mb-2 text-gray-900">Output</label>
           <div className="min-h-[220px] rounded-lg border border-gray-300 p-3 bg-white whitespace-pre-wrap text-gray-900">
             {loading ? (
-              <span className="text-gray-600">Generating your bio...</span>
+              <span className="text-gray-600">Generating your Headline...</span>
             ) : output ? (
               output
             ) : (
               <span className="text-gray-500">
-                Your generated bio will appear here.
+                Your generated Headline will appear here.
               </span>
             )}
           </div>

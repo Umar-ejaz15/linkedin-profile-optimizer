@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import TabsSidebar from "./components/TabsSidebar";
-import BioGenerator from "./components/generators/BioGenerator";
 import ExperienceWriter from "./components/generators/ExperienceWriter";
 import PostWriter from "./components/generators/PostWriter";
 import ProfileAnalyzer from "./components/generators/ProfileAnalyzer";
+import HeadlineGenerator from "./components/generators/HeadlineGenerator";
 export default function HomePage() {
   const tabs = [
-    "About / Bio Generator",
+    "Headline Generator",
     "Experience Writer",
     "Post Writer",
     "Profile Analyzer",
@@ -19,7 +19,7 @@ export default function HomePage() {
   const renderActiveTab = () => {
     switch (active) {
       case "About / Bio Generator":
-        return <BioGenerator />;
+        return <HeadlineGenerator />;
       case "Experience Writer":
         return <ExperienceWriter />;
       case "Post Writer":
