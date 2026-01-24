@@ -16,6 +16,8 @@ export async function POST(req: Request) {
 
     // Check for API key
     const apiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+    const model = process.env.GEMINI_MODEL || "gemini-1.5-flash-latest";
+    const apiVersion = process.env.GEMINI_API_VERSION || "v1beta";
     if (!apiKey) {
       console.error("GEMINI_API_KEY is not set in .env.local");
       return NextResponse.json(
@@ -25,7 +27,7 @@ export async function POST(req: Request) {
     }
 
     // Initialize Google GenAI
-    const ai = new GoogleGenAI({ apiKey });
+    const ai = new GoogleGenAI({ apiKey, apiVersion });
 
     // Build input summary
     const inputSummary = `
@@ -62,11 +64,7 @@ Example format:
 #TechCareers`;
 
     // Generate content using Gemini
-    const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash-exp",
-      contents: prompt,
-    });
-
+    const response = await ai.models.generateContent({ model, contents: prompt });
     const result = response.text?.trim();
 
     if (!result) {
