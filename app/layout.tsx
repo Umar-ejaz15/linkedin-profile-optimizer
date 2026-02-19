@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,13 +12,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "LinkedIn AI Toolkit",
   description: "AI-powered tools for generating LinkedIn headlines, posts, and more.",
   metadataBase: new URL("https://linkedin-profile-optimizer.vercel.app/"),
   keywords: ["LinkedIn", "AI", "Headline Generator", "Post Writer", "Profile Tools"],
   authors: [{ name: "Your Name" }],
-  viewport: "width=device-width, initial-scale=1",
   openGraph: {
     title: "LinkedIn AI Toolkit",
     description: "AI-powered tools for generating LinkedIn headlines, posts, and more.",
